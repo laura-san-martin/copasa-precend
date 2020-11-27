@@ -1,4 +1,4 @@
-<?php $preUrl = "/copasa-precend"; ?>
+<?php $preUrl = ""; ?>
 
 <!DOCTYPE html>
 <html lang="en">
