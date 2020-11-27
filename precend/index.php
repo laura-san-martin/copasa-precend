@@ -1,0 +1,77 @@
+<?php
+
+$title = "PRECEND";
+$video = "https://www.youtube.com/embed/xvb9BqK0NZE";
+
+include('../components/header.php'); ?>
+
+<?php 
+
+$conteudoTextual = [];
+
+$conteudoTextual[0]['titulo'] = "<h2>O que é o <br/><b>PRECEND?</b></h2>";
+$conteudoTextual[0]['texto'] = "<p>O Programa de Recebimento e Controle de Efluentes Não Domésticos foi criado pela Copasa para monitorar, controlar e regulamentar, como uma alternativa ambientalmente adequada, dos efluentes líquidos (esgoto) não domésticos recebidos na rede pública coletora de esgotos.</p>";
+
+$conteudoTextual[1]['titulo'] = "<h2>Para <br/>que serve <br/><b>o PRECEND?</b></h2>";
+$conteudoTextual[1]['texto'] = "<p>O programa tem vários objetivos, dentre os principais estão:<br/>
+- Reduzir os riscos operacionais do sistema público de esgotos;<br/>
+- Assegurar a integridade das tubulações da rede coletora pública de esgotos, evitando corrosões, incrustações e/ou obstruções, provenientes do lançamento dos efluentes não domésticos;<br/>
+- Reduzir a probabilidade das ocorrências de explosões e/ou inflamabilidade;
+- Prevenir o lançamento de poluentes que passam pela Estação de Tratamento de Esgotos (ETE) e possam deteriorar os cursos d’água;<br/>
+- Não permitir o lançamento de efluentes que possam desequilibrar o tratamento de esgotos nas ETEs;<br/>
+- Viabilizar o atendimento aos padrões legais de lançamento do efluente final e lodos produzidos nas ETEs.</p>";
+
+?>
+
+<div class="pt-4 pb-5 py-lg-5" ></div>
+<section class="copasa__titulo-texto copasa__titulo-texto--video">
+    <div class="copasa__titulo-texto__conteudo mt-5">
+        <div class="container pt-4 pt-md-0 ">
+            <div class="row">
+                <div class="col-6 copasa__titulo-texto__conteudo__texto">
+                    <div>
+                        <h1>PRECEND</h1>
+                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.5 26.4" >
+                        <path fill="#FFFFFF" d="M17.1,21.3c-5.5,0-9.4-3-9.4-8c0-4.8,3.5-8.3,8.8-8.3c2.6,0,4.9,0.6,7.3,1.8l0.6-5.5C21.8,0.6,19,0,16.1,0
+                            C6.8,0,0,4.4,0,13.3c0,9.6,8.7,13.1,16.2,13.1c3.8,0,6.2-0.5,8.4-1L24.2,20C22.1,20.7,19.6,21.3,17.1,21.3 M38.6,0
+                            c-9.3,0-14.1,5-14.1,13.2c0,8.1,4.9,13.2,14.1,13.2c9.2,0,14.1-5.1,14.1-13.2C52.7,5,47.9,0,38.6,0 M38.6,21.3
+                            c-4.6,0-6.4-3.9-6.4-8.1C32.2,8.8,34,5,38.6,5c4.6,0,6.4,3.7,6.4,8.1C45,17.4,43.2,21.3,38.6,21.3 M75.7,8.8c0-5.7-4-8.4-12.6-8.4
+                            h-9v25.5h7.5V17h2.9C71.5,17,75.7,14,75.7,8.8 M63.5,12.2h-1.9V5.3h1.9c2.6,0,4.6,0.8,4.6,3.4C68.2,11.4,66.1,12.2,63.5,12.2
+                            M81.5,0.4L70.8,25.9h7.6l2.2-5.4h10.6l2.1,5.4h8.2L90.7,0.4H81.5z M82.4,15.7l3.6-10h0.1l3.4,10H82.4z M109.8,7.4
+                            c0-2.2,3.1-2.4,5-2.4c2.1,0,4.3,0.4,6.3,1.2l0.5-5.3c-1.9-0.6-4.6-1-7.3-1c-5.7,0-12.3,1.7-12.3,7.8c0,9.3,13.3,6.3,13.3,11
+                            c0,2-2.3,2.5-4.6,2.5c-3.1,0-5.8-0.7-7.7-1.7l-0.6,5.6c2.5,0.7,5.8,1.1,8.4,1.1c6.3,0,12.4-1.8,12.4-8.4
+                            C123.1,8.8,109.8,11.5,109.8,7.4 M141.7,0.4h-9.2l-10.7,25.5h7.6l2.2-5.4h10.6l2.1,5.4h8.2L141.7,0.4z M133.4,15.7l3.6-10h0.1
+                            l3.4,10H133.4z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-6 pl-0 d-none d-md-block">
+                    <?php include('../components/video.php'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="copasa__titulo-texto copasa__titulo-texto--color">
+<?php foreach($conteudoTextual as $conteudo): ?>
+    <div class="copasa__titulo-texto__conteudo bg-green color-green">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
+                    <?php echo $conteudo['titulo']; ?>
+                </div>
+                <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
+                    <?php echo $conteudo['texto']; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+</section>
+
+<section class="copasa__menu--alt">
+    <?php include('../components/menu.php'); ?>
+</section>
+
+<?php include('../components/footer.php'); ?>
