@@ -1,7 +1,50 @@
 <?php
 
+$opcoes = json_decode(
+    '{
+    "facebookLink": "https://www.facebook.com/copasaoficial",
+    "youtubeLink": "https://www.youtube.com/user/TVCOPASAMG/",
+    "twitterLink": "https://www.instagram.com/copasamg/",
+    "instagramLink": "https://www.instagram.com/copasamg/",
+    "videoPrecend": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "videoEtapas": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "videoDuvidas": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "linkCopasa": "http://www.copasa.com.br/",
+    "linkEsgoto": "http://www.copasa.com.br/wps/portal/internet/esgotamento-sanitario/o-sistema-de-esgoto",
+    "linkLogin": "https://copasaatende.powerappsportals.com/",
+    "linkConta": "https://copasaatende.powerappsportals.com/MyAccount/"
+}', true
+);
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/opcoes",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $opcoes = json_decode($response, true);
+}
+
 $title = "PRECEND";
-$video = "https://www.youtube.com/embed/xvb9BqK0NZE";
+$video = $opcoes["videoPrecend"];
 
 include('../components/header.php'); ?>
 
@@ -9,17 +52,32 @@ include('../components/header.php'); ?>
 
 $conteudoTextual = [];
 
-$conteudoTextual[0]['titulo'] = "<h2>O que é o <br/><b>PRECEND?</b></h2>";
-$conteudoTextual[0]['texto'] = "<p>O Programa de Recebimento e Controle de Efluentes Não Domésticos foi criado pela Copasa para monitorar, controlar e regulamentar, como uma alternativa ambientalmente adequada, dos efluentes líquidos (esgoto) não domésticos recebidos na rede pública coletora de esgotos.</p>";
+$curl = curl_init();
 
-$conteudoTextual[1]['titulo'] = "<h2>Para <br/>que serve <br/><b>o PRECEND?</b></h2>";
-$conteudoTextual[1]['texto'] = "<p>O programa tem vários objetivos, dentre os principais estão:<br/>
-- Reduzir os riscos operacionais do sistema público de esgotos;<br/>
-- Assegurar a integridade das tubulações da rede coletora pública de esgotos, evitando corrosões, incrustações e/ou obstruções, provenientes do lançamento dos efluentes não domésticos;<br/>
-- Reduzir a probabilidade das ocorrências de explosões e/ou inflamabilidade;
-- Prevenir o lançamento de poluentes que passam pela Estação de Tratamento de Esgotos (ETE) e possam deteriorar os cursos d’água;<br/>
-- Não permitir o lançamento de efluentes que possam desequilibrar o tratamento de esgotos nas ETEs;<br/>
-- Viabilizar o atendimento aos padrões legais de lançamento do efluente final e lodos produzidos nas ETEs.</p>";
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/precend",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $conteudoTextual = json_decode($response, true);
+}
 
 ?>
 
@@ -54,15 +112,16 @@ $conteudoTextual[1]['texto'] = "<p>O programa tem vários objetivos, dentre os p
 </section>
 
 <section class="copasa__titulo-texto copasa__titulo-texto--color">
-<?php foreach($conteudoTextual as $conteudo): ?>
+<?php foreach($conteudoTextual as $conteudo):
+    $texto = explode("</h2>", $conteudo['texto']); ?>
     <div class="copasa__titulo-texto__conteudo bg-green color-green">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
-                    <?php echo $conteudo['titulo']; ?>
+                    <?php echo $texto[0]."</h2>"; ?>
                 </div>
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
-                    <?php echo $conteudo['texto']; ?>
+                    <?php echo $texto[1]; ?>
                 </div>
             </div>
         </div>

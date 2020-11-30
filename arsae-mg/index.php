@@ -9,14 +9,32 @@ include('../components/header.php'); ?>
 
 $conteudoTextual = [];
 
-$conteudoTextual[0]['titulo'] = "<h2>A ARSAE-MG</h2>";
-$conteudoTextual[0]['texto'] = "<p class='text-justify'>A Agência Reguladora de Serviços de Abastecimento e Esgotamento Sanitário do Estado de Minas Gerais (ARSAE-MG) objetiva regulamentar a prestação de serviços de abastecimento de água e de esgotamento sanitário de todas as operadoras de saneamento atuantes no estado de Minas Gerais.</p><p class='text-justify'>A Copasa segue as regulamentações determinadas pela ARSAE-MG para desenvolver seus processos e serviços. Dentre as regulamentações da ARSAE-MG para o controle de efluentes não domésticos, se destacam:</p>";
+$curl = curl_init();
 
-$conteudoTextual[1]['titulo'] = "<h2>Resolução ARSAE MG nº 40/2013</h2>";
-$conteudoTextual[1]['texto'] = "<p class='text-justify'>Art. 45 Não é permitido despejar na rede coletora de esgoto, sem tratamento prévio, efluente não doméstico que contenha substância que, por sua natureza, possa danificá-la, obstruí-la, ou interferir no processo de depuração de Estação de Tratamento de Esgoto ou causar dano ao meio ambiente, ao patrimônio público ou a terceiro.</p><p class='text-justify'>§ 1° O efluente não doméstico, para ser lançado diretamente na rede coletora de esgoto, deverá obedecer a características biológicas e físico-químicas definidas em norma específica do prestador, homologada pela ARSAE-MG.</p><p class='text-justify'>§ 2° Constatado que o efluente não doméstico não atende às normas específicas para o lançamento na rede pública de esgoto, a autoridade ambiental competente deverá ser informada pelo prestador.<br/>Art. 117 Considera-se conduta irregular do usuário passível de sanção pelo prestador:<br/>X – Lançamento na rede de esgoto de efluentes não domésticos que, por suas características, exijam tratamento prévio;</p><p class='text-justify'>Assim, a Copasa recebe os efluentes não domésticos no seu sistema público de esgotos e os encaminha, conjuntamente com os efluentes domésticos, às estações de tratamento. Portanto, é fundamental que os estabelecimentos garantam o atendimento aos padrões de lançamento determinados pela T.187/6, documento homologado pela ARSAE.</p>";
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/resolucoes",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
 
-$conteudoTextual[2]['titulo'] = "<h2>Resolução ARSAE MG nº 117/2018</h2>";
-$conteudoTextual[2]['texto'] = "<p class='text-justify'>Homologa a Norma Técnica T.187/6 – Lançamento de Efluentes não Domésticos no Sistema de Esgotamento Sanitário da Companhia de Saneamento de Minas Gerais – COPASA MG.<br/>Uma vez acompanhada pelo PRECEND, a destinação do esgoto do estabelecimento é considerada ambientalmente monitorada, o que pode ser atestado pela Copasa aos Órgãos ambientais.</p>";
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $conteudoTextual = json_decode($response, true);
+}
 
 ?>
 
@@ -43,7 +61,7 @@ $conteudoTextual[2]['texto'] = "<p class='text-justify'>Homologa a Norma Técnic
             <?php foreach($conteudoTextual as $conteudo): ?>
                 <div class="col-12">
                     <div class="copasa__texto__conteudo">
-                        <?php echo $conteudo['titulo']; ?>
+                        <h2><?php echo $conteudo['titulo']; ?></h2>
                         <?php echo $conteudo['texto']; ?>
                     </div>
                 </div>

@@ -1,7 +1,50 @@
 <?php
 
+$opcoes = json_decode(
+    '{
+    "facebookLink": "https://www.facebook.com/copasaoficial",
+    "youtubeLink": "https://www.youtube.com/user/TVCOPASAMG/",
+    "twitterLink": "https://www.instagram.com/copasamg/",
+    "instagramLink": "https://www.instagram.com/copasamg/",
+    "videoPrecend": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "videoEtapas": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "videoDuvidas": "https://www.youtube.com/embed/xvb9BqK0NZE",
+    "linkCopasa": "http://www.copasa.com.br/",
+    "linkEsgoto": "http://www.copasa.com.br/wps/portal/internet/esgotamento-sanitario/o-sistema-de-esgoto",
+    "linkLogin": "https://copasaatende.powerappsportals.com/",
+    "linkConta": "https://copasaatende.powerappsportals.com/MyAccount/"
+}', true
+);
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/opcoes",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $opcoes = json_decode($response, true);
+}
+
 $title = "PRECEND";
-$video = "https://www.youtube.com/embed/xvb9BqK0NZE";
+$video = $opcoes["videoEtapas"];
 
 include('../components/header.php'); ?>
 
@@ -9,23 +52,32 @@ include('../components/header.php'); ?>
 
 $conteudoTextual = [];
 
-$conteudoTextual[0]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[0]['texto'] = "<h3>Solicitação do “Laudo de<br/>liberação dasinstalações<br/>sanitárias”</h3><p>Cliente procura a Copasa, através do telefone 115 ou agência de atendimento, para solicitação do documento destinado ao Órgão Ambiental.</p>";
+$curl = curl_init();
 
-$conteudoTextual[1]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[1]['texto'] = "<h3>Vistoria inicial<br/>da Copasa</h3><p>Copasa irá identificar a necessidade ou não de ingresso no programa PRECEND. Para os imóveis dispensados de ingresso será emitido um laudo que será entregue pessoalmente na agência de atendimento da Copasa e poderá ser levado ao Órgão Ambiental.</p>";
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/etapas",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
 
-$conteudoTextual[2]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[2]['texto'] = "<h3>Solicitação de ingresso e<br/>liberação de documento para<br/>órgão ambiental</h3><p>Por e-mail, o estabelecimento informará dados básicos, como razão social, endereço e CNPJ, e terá seu ingresso oficial.<br/>Nesse momento, a Copasa fornecerá um documento para que o estabelecimento informe ao Órgão Ambiental que iniciou o processo e receberá o prazo para elaboração do Projeto.<br/>Também receberá como resposta para o e-mail todas as orientações para desenvolvimento do projeto que deverá ser entregue à Copasa: Termo de Referência e Norma Técnica T. 187/6.</p>";
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-$conteudoTextual[3]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[3]['texto'] = "<h3>Elaboração de<br/>Projeto Técnico</h3><p>Deverá ser elaborado um Projeto Técnico, conforme orientações recebidas por e-mail, no qual o estabelecimento irá demonstrar para a Copasa as principais redes: doméstica, não doméstica e pluvial, os processos realizados no local, os produtos utilizados, os controles existentes e como pretende se ajustar para atendimento aos limites previstos na Norma Técnica T.187/6.</p>";
+curl_close($curl);
 
-$conteudoTextual[4]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[4]['texto'] = "<h3>Assinatura<br/>de contrato </h3><p>Aprovado o projeto, a Copasa e o estabelecimento assinarão um contrato, onde constarão as obrigações das partes e possíveis sanções em caso de descumprimento.</p>";
-
-$conteudoTextual[5]['titulo'] = "<img src='".$preUrl."/public/imgs/pics/copasa-banner-home.jpg' />";
-$conteudoTextual[5]['texto'] = "<h3>Automonitoramento<br/>e acompanhamento </h3><p>Uma das obrigações previstas em contrato é a realização de uma coleta, periódica, pelo estabelecimento, e encaminhamento dos resultados para acompanhamento pela Copasa.</p><p>A coleta e análise deverão ser realizadas por laboratório acreditado/homologado pela Rede Metrológica ou INMETRO. A Copasa avaliará os resultados e fará fiscalizações para acompanhamento das coletas e análises, conforme previsto em contrato.</p>";
+if ($err) {
+  
+} else {
+  $conteudoTextual = json_decode($response, true);
+}
 
 ?>
 
@@ -51,7 +103,7 @@ $conteudoTextual[5]['texto'] = "<h3>Automonitoramento<br/>e acompanhamento </h3>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
-                    <?php echo $conteudo['titulo']; ?>
+                    <img src="<?php echo $conteudo['arquivo']; ?>" />
                 </div>
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
                     <div>

@@ -9,11 +9,32 @@ include('../components/header.php'); ?>
 
 $conteudoTextual = [];
 
-$conteudoTextual[0]['titulo'] = "<h2>Para quem o<br/>PRECEND é destinado?</h2>";
-$conteudoTextual[0]['texto'] = "<p>O programa visa o acompanhamento dos estabelecimentos comerciais, industriais e prestadores de serviços, que gerem efluentes com potencial para danificar a rede pública coletora de esgoto, prejudicar ou impedir o tratamento realizado nas Estações de Tratamento de Efluentes – ETEs da Copasa e/ou causar danos ao meio ambiente.</p>";
+$curl = curl_init();
 
-$conteudoTextual[1]['titulo'] = "<h2>Quando procurar a<br/>Copasa para falar sobre<br/>o PRECEND?</h2>";
-$conteudoTextual[1]['texto'] = "<ul><li><p>Quando o estabelecimento gera efluente não doméstico e busca uma forma ambientalmente adequada de destiná-lo.</p></li><li><p>Quando o estabelecimento gera ou irá gerar efluente não doméstico e deseja uma nova ligação de esgoto.</p></li><li><p>Quando o estabelecimento está em processo de licenciamento e a Secretaria de Meio Ambiente/Prefeitura Municipal solicita o “Laudo de liberação das instalações sanitárias”.</p></li><li><p>Quando o estabelecimento está em processo de obtenção de alvará e a Secretaria de Meio Ambiente/Prefeitura Municipal solicita o “Laudo de liberação das instalações sanitárias”.</p></li></ul>";
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/praquem",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $conteudoTextual = json_decode($response, true);
+}
 
 ?>
 <div class="pt-4 pb-5 py-lg-5" ></div>
@@ -38,7 +59,7 @@ $conteudoTextual[1]['texto'] = "<ul><li><p>Quando o estabelecimento gera efluent
             <?php foreach($conteudoTextual as $conteudo): ?>
                 <div class="col-12">
                     <div class="copasa__texto__conteudo">
-                        <?php echo $conteudo['titulo']; ?>
+                        <h2><?php echo $conteudo['titulo']; ?></h2>
                         <?php echo $conteudo['texto']; ?>
                     </div>
                 </div>

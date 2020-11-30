@@ -39,7 +39,7 @@
             </a>
         </div>
         <div class="col-6 col-md-3">
-            <a class="copasa__menu__item bg-pink" href="<?php echo $preUrl ?>/esgoto">
+            <a class="copasa__menu__item bg-pink" href="<?php echo $opcoes["linkEsgoto"] ?>" target="_blank">
                 <h2><b>SES</b></h2>
             </a>
         </div>

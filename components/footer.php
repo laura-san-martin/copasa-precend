@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <a class="footer__endereco" href="https://goo.gl/maps/itmN1UNsNQdFt6Ln6" target="_blank">
+                    <a class="footer__endereco" href="https://goo.gl/maps/SLkj4xDZe6Cc7CEd8" target="_blank">
                         <p><b>Companhia de Saneamento de Minas Gerais</b><br/>Rua Mar de Espanha, 525 - Bairro Santo Antônio<br />CEP: 30.330-900 - Belo Horizonte - MG</p>
                     </a>
                 </div>

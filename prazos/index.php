@@ -9,11 +9,32 @@ include('../components/header.php'); ?>
 
 $conteudoTextual = [];
 
-$conteudoTextual[0]['titulo'] = "<h2>Principais <br/>prazos</h2>";
-$conteudoTextual[0]['texto'] = "<p>A Copasa analisa e emite parecer sobre projeto entregue, num prazo médio de 30 (trinta) dias. O estabelecimento deve informar a data da coleta pelo laboratório, com antecedência mínima de 10 (dez) dias, conforme previsto em contrato, para acompanhamento pela Copasa. Os prazos referentes ao licenciamento e a obtenção de alvará cabem ao Órgão Ambiental.</p><p>
-A Copasa, durante o processo de avaliação, poderá emitir documento
-informando a etapa em que se encontra o estabelecimento, caso seja solicitado.
-Todas as solicitações de laudos, declarações, informações e vistorias, poderão ser enviadas para o e-mail precend@copasa.com.br.</p>";
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/prazos",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  
+} else {
+  $conteudoTextual = json_decode($response, true);
+}
 
 ?>
 
@@ -39,7 +60,7 @@ Todas as solicitações de laudos, declarações, informações e vistorias, pod
             <?php foreach($conteudoTextual as $conteudo): ?>
                 <div class="col-12">
                     <div class="copasa__texto__conteudo">
-                        <?php echo $conteudo['titulo']; ?>
+                        <h2><?php echo $conteudo['titulo']; ?></h2>
                         <?php echo $conteudo['texto']; ?>
                     </div>
                 </div>

@@ -9,23 +9,32 @@ include('../components/header.php'); ?>
 
 $documentos = [];
 
-$documentos[0]['titulo'] = "Documento";
-$documentos[0]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
+$curl = curl_init();
 
-$documentos[1]['titulo'] = "Documento";
-$documentos[1]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/documentos",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_POSTFIELDS => "",
+  CURLOPT_HTTPHEADER => array(
+    "Content-Type: application/json"
+  ),
+));
 
-$documentos[2]['titulo'] = "Documento";
-$documentos[2]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
+$response = curl_exec($curl);
+$err = curl_error($curl);
 
-$documentos[3]['titulo'] = "Documento";
-$documentos[3]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
+curl_close($curl);
 
-$documentos[4]['titulo'] = "Documento";
-$documentos[4]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
-
-$documentos[5]['titulo'] = "Documento";
-$documentos[5]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09/IDEAL-EBOOK-INDICADORES-DA-PANIFICA%C3%87%C3%83O-PRIMEIRO-SEMESTRE-2020.pdf";
+if ($err) {
+  
+} else {
+  $documentos = json_decode($response, true);
+}
 
 ?>
 
@@ -54,7 +63,7 @@ $documentos[5]['link'] = "https://consultideal.com.br/wp-content/uploads/2020/09
                  echo '<div class="col-6 col-sm-3 col-lg-2">';
              }
              ?>
-                <a class="copasa__documentos__item" href="<?php echo $documento['link']; ?>" download>
+                <a class="copasa__documentos__item" href="<?php echo $documento['arquivo']; ?>" download>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 1153 1569.6">
 <path fill="#2660AB" d="M876.6,3.8l272.6,272.6c2.5,2.5,3.8,5.6,3.8,9.1c0,423.7,0,847.5,0,1271.2c0,7.1-5.8,12.9-12.9,12.9H12.9
