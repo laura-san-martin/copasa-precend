@@ -80,14 +80,13 @@ if ($err) {
 }
 ?>
 
-<div class="pt-4 pb-5 py-lg-5" ></div>
 <section class="copasa__titulo-texto copasa__titulo-texto--video--alt">
-    <div class="copasa__titulo-texto__conteudo mt-5">
+    <div class="copasa__titulo-texto__conteudo">
         <div class="container pt-4 pt-md-0 ">
             <div class="row">
                 <div class="col-12 col-md-5 copasa__titulo-texto__conteudo__texto color-white">
                     <div>
-                        <h1 class="big">Dúvidas</h1>
+                        <h1>Perguntas <br/>e respostas</h1>
                         <h4>Mais informações<br/>
                         <b>sobre o PRECEND</b></h4>
                     </div>

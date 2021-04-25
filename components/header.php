@@ -1,5 +1,5 @@
 <?php 
-$preUrl = "";
+$preUrl = "/copasa-precend/";
 
 $opcoes = json_decode(
     '{
@@ -85,7 +85,8 @@ if ($err) {
                                 Etapas
                             </a>
                             <a href="<?php echo $opcoes["linkConta"] ?>"  target="_blank">
-                                Conta
+                                Copasa<br/>
+                                <span>atende</span>
                             </a>
                             <a href="<?php echo $preUrl ?>/duvidas">
                                 Dúvidas
@@ -96,9 +97,6 @@ if ($err) {
                         </div>
                         <!-- SOCIAL -->
                         <div class="navigation__social">
-                            <a class="navigation__social__text" href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
-                                Login
-                            </a>
                             <a class="navigation__social__icon" target="_blank" href="<?php echo $opcoes["facebookLink"] ?>"><svg
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512">
                                     <path
@@ -122,6 +120,14 @@ if ($err) {
                                 <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
                                 </svg>
                             </a>
+                            <div class="navigation__social__text__container">
+                                <a class="navigation__social__text" href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank"><u>
+                                Já sou cliente</u>
+                                </a>
+                                <a class="navigation__social__text" href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank"><u>
+                                Laboratórios</u>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

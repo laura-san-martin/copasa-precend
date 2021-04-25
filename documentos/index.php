@@ -38,13 +38,12 @@ if ($err) {
 
 ?>
 
-<div class="mt-5 mb-4 pt-4 pb-5 py-lg-5" ></div>
 <section class="copasa__titulo">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-10 offset-lg-1">
                 <div class="bg-green py-5">
-                    <h1 class="text-center my-5 py-5"><b>Documentos</b></h1>
+                    <h1 class="text-center my-5 py-5"><b>DOCUMENTOS DE REFERÊNCIA</b></h1>
                 </div>
             </div>
         </div>
@@ -89,7 +88,7 @@ if ($err) {
         </div>
     </div>
 </section>
-
+<div class="py-5 bg-white"></div>
 <section class="copasa__menu--alt">
     <?php include('../components/menu.php'); ?>
 </section>

@@ -81,9 +81,8 @@ if ($err) {
 
 ?>
 
-<div class="pt-4 pb-5 py-lg-5" ></div>
 <section class="copasa__titulo-texto copasa__titulo-texto--video">
-    <div class="copasa__titulo-texto__conteudo mt-5">
+    <div class="copasa__titulo-texto__conteudo">
         <div class="container pt-4 pt-md-0 ">
             <div class="row">
                 <div class="col-6 copasa__titulo-texto__conteudo__texto">

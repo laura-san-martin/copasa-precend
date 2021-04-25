@@ -37,9 +37,8 @@ if ($err) {
 }
 
 ?>
-<div class="pt-4 pb-5 py-lg-5" ></div>
 <section class="copasa__titulo-texto copasa__titulo-texto--color">
-    <div class="copasa__titulo-texto__conteudo bg-pink color-pink mt-5 ">
+    <div class="copasa__titulo-texto__conteudo bg-pink color-pink">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">

@@ -38,17 +38,15 @@ if ($err) {
 
 ?>
 
-<div class="pt-4 pb-5 py-lg-5" ></div>
 <section class="copasa__titulo-texto copasa__titulo-texto--color">
-    <div class="copasa__titulo-texto__conteudo bg-yellow color-yellow  mt-5 ">
+    <div class="copasa__titulo-texto__conteudo bg-yellow color-yellow ">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 copasa__titulo-texto__conteudo__texto">
                     <h1>Resolução<br/><b>ARSAE-MG</b></h1>
                 </div>
                 <div class="col-12 col-md-6 d-flex copasa__titulo-texto__conteudo__texto">
-                    <h4 class="text-md-center">Resolução<br/>nº 40/2013</h4>
-                    <h4 class="text-right text-md-center">Resolução<br/>nº 117/2018</h4>
+                    <h4 class="text-md-center">Resolução<br/>ARSAE-MG 130/2019</h4>
                 </div>
             </div>
         </div>
