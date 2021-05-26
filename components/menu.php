@@ -36,7 +36,7 @@
         <div class="col-6 col-md-3">
             <a class="copasa__menu__item bg-white" href="<?php echo $preUrl ?>/perguntas-respostas">
                 <h2>Perguntas<br/>
-                <b>e Respostas</b></h2>
+                <b><small>e Respostas</small></b></h2>
             </a>
         </div>
     </div>
