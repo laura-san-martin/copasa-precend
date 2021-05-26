@@ -1,5 +1,5 @@
 <?php 
-$preUrl = "/copasa-precend/";
+$preUrl = "";
 
 $opcoes = json_decode(
     '{
@@ -88,8 +88,9 @@ if ($err) {
                                 Copasa<br/>
                                 <span>atende</span>
                             </a>
-                            <a href="<?php echo $preUrl ?>/duvidas">
-                                Dúvidas
+                            <a href="<?php echo $preUrl ?>/perguntas-respostas">
+                                Perguntas<br/>
+                                <span>e respostas</span>
                             </a>
                             <a href="<?php echo $opcoes["linkEsgoto"] ?>"  target="_blank">
                                 Esgoto
