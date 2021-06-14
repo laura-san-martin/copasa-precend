@@ -108,7 +108,7 @@ if ($err) {
                     <h2><b><?php echo $conteudo['titulo']; ?></b></h2>
                 </div>
                 <div class="col-12 col-md-7 d-flex copasa__titulo-texto__conteudo__texto">
-                    <div><?php echo $conteudo['texto']; ?></div>
+                    <div class="justify-h3"><?php echo $conteudo['texto']; ?></div>
                 </div>
             </div>
         </div>

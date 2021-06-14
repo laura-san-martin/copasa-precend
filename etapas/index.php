@@ -79,6 +79,7 @@ if ($err) {
   $conteudoTextual = json_decode($response, true);
 }
 
+$count = 0;
 ?>
 
 <section class="copasa__titulo-texto copasa__titulo-texto--video">
@@ -98,6 +99,7 @@ if ($err) {
 
 <section class="copasa__titulo-texto color-white">
 <?php foreach($conteudoTextual as $conteudo): ?>
+    <?php if($count%2 == 0): ?>
     <div class="copasa__titulo-texto__conteudo">
         <div class="container">
             <div class="row">
@@ -112,6 +114,23 @@ if ($err) {
             </div>
         </div>
     </div>
+    <?php else: ?>
+    <div class="copasa__titulo-texto__conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 order-2 order-md-1 copasa__titulo-texto__conteudo__texto copasa__titulo-texto__conteudo__texto--alt">
+                    <div>
+                        <?php echo $conteudo['texto']; ?>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-2 copasa__titulo-texto__conteudo__texto">
+                    <img src="<?php echo $conteudo['arquivo']; ?>" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif;
+    $count++; ?>
     <?php endforeach; ?>
 </section>
 
