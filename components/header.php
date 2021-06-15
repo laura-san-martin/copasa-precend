@@ -76,22 +76,13 @@ if ($err) {
                         </a>
                         <!-- MENU -->
                         <div class="navigation__sections">
-                            <a href="<?php echo $opcoes["linkCopasa"] ?>"  target="_blank">
-                                Copasa
+                            <a href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
+                            <u>
+                                Laboratórios</u>
                             </a>
-                            <a href="<?php echo $preUrl ?>/etapas">
-                                Etapas
-                            </a>
-                            <a href="<?php echo $opcoes["linkConta"] ?>"  target="_blank">
-                                Copasa<br/>
-                                <span>atende</span>
-                            </a>
-                            <a href="<?php echo $preUrl ?>/perguntas-respostas">
-                                Perguntas<br/>
-                                <span>e respostas</span>
-                            </a>
-                            <a href="<?php echo $opcoes["linkEsgoto"] ?>"  target="_blank">
-                                Esgoto
+                            <a href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
+                            <u>
+                                Já sou cliente</u>
                             </a>
                         </div>
                         <!-- SOCIAL -->
@@ -122,14 +113,6 @@ if ($err) {
                             <a class="navigation__social__icon" target="_blank" href="<?php echo $opcoes["linkedinLink"] ?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="3FFF" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
                             </a>
-                            <div class="navigation__social__text__container">
-                                <a class="navigation__social__text" href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank"><u>
-                                Já sou cliente</u>
-                                </a>
-                                <a class="navigation__social__text" href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank"><u>
-                                Laboratórios</u>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
