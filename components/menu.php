@@ -40,9 +40,9 @@
             </a>
         </div>
         <div class="col-6 col-md-3">
-            <a class="copasa__menu__item bg-orange" target="_blank" href="<?php echo $opcoes["linkEsgoto"] ?>">
+            <a class="copasa__menu__item bg-pink" target="_blank" href="<?php echo $opcoes["linkEsgoto"] ?>">
                 <h2 style="font-size: 2.3rem !important;">
-                <b style="font-size: 2.4rem;">Solicitar ingresso</b><br/>
+                <b style="font-size: 2.4rem; !important;">Solicitar ingresso</b><br/>
                 Laudo de Liberação</h2>
             </a>
         </div>
