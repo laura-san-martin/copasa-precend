@@ -39,5 +39,11 @@
                 <b><small>e Respostas</small></b></h2>
             </a>
         </div>
+        <div class="col-6 col-md-3">
+            <a class="copasa__menu__item bg-orange" target="_blank" href="<?php echo $opcoes["linkEsgoto"] ?>">
+                <h2><b><small>Solicitar ingresso<br/>
+                Laudo de Liberação</small></b></h2>
+            </a>
+        </div>
     </div>
 </div>

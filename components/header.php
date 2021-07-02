@@ -12,7 +12,7 @@ $opcoes = json_decode(
     "videoEtapas": "https://www.youtube.com/embed/xvb9BqK0NZE",
     "videoDuvidas": "https://www.youtube.com/embed/xvb9BqK0NZE",
     "linkCopasa": "http://www.copasa.com.br/",
-    "linkEsgoto": "http://www.copasa.com.br/wps/portal/internet/esgotamento-sanitario/o-sistema-de-esgoto",
+    "linkEsgoto": "https://copasaportalprd.azurewebsites.net/copasa.portal",
     "linkLogin": "https://copasaatende.powerappsportals.com/",
     "linkConta": "https://copasaatende.powerappsportals.com/MyAccount/"
 }', true
@@ -78,11 +78,11 @@ if ($err) {
                         <div class="navigation__sections">
                             <a href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
                             <u>
-                                Laboratórios</u>
+                                Copasa Atende</u>
                             </a>
-                            <a href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
+                            <a href="<?php echo $opcoes["linkConta"] ?>"  target="_blank">
                             <u>
-                                Já sou cliente</u>
+                                Portal PRECEND</u>
                             </a>
                         </div>
                         <!-- SOCIAL -->
