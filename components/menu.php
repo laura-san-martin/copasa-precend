@@ -41,8 +41,9 @@
         </div>
         <div class="col-6 col-md-3">
             <a class="copasa__menu__item bg-orange" target="_blank" href="<?php echo $opcoes["linkEsgoto"] ?>">
-                <h2><b><small>Solicitar ingresso<br/>
-                Laudo de Liberação</small></b></h2>
+                <h2 style="font-size: 2.3rem !important;">
+                <b style="font-size: 2.4rem;">Solicitar ingresso</b><br/>
+                Laudo de Liberação</h2>
             </a>
         </div>
     </div>
