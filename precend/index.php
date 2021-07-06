@@ -17,7 +17,7 @@ $conteudoPrecend = json_decode($conteudoPrecendFile, true);
                 <div class="col-6 copasa__titulo-texto__conteudo__texto">
                     <div>
                         <h1>PRECEND</h1>
-                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.5 26.4" >
+                        <svg  class="copasa__titulo-texto__conteudo__texto-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152.5 26.4" >
                         <path fill="#FFFFFF" d="M17.1,21.3c-5.5,0-9.4-3-9.4-8c0-4.8,3.5-8.3,8.8-8.3c2.6,0,4.9,0.6,7.3,1.8l0.6-5.5C21.8,0.6,19,0,16.1,0
                             C6.8,0,0,4.4,0,13.3c0,9.6,8.7,13.1,16.2,13.1c3.8,0,6.2-0.5,8.4-1L24.2,20C22.1,20.7,19.6,21.3,17.1,21.3 M38.6,0
                             c-9.3,0-14.1,5-14.1,13.2c0,8.1,4.9,13.2,14.1,13.2c9.2,0,14.1-5.1,14.1-13.2C52.7,5,47.9,0,38.6,0 M38.6,21.3

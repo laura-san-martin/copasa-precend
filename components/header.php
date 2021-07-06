@@ -37,11 +37,11 @@ $opcoes = json_decode($optionsFile, true);
                         <div class="navigation__sections">
                             <a href="<?php echo $opcoes["linkLogin"] ?>"  target="_blank">
                             <u>
-                                Copasa Atende</u>
+                                Já sou cliente</u>
                             </a>
                             <a href="<?php echo $opcoes["linkConta"] ?>"  target="_blank">
                             <u>
-                                Portal PRECEND</u>
+                                Laboratórios</u>
                             </a>
                         </div>
                         <!-- SOCIAL -->
