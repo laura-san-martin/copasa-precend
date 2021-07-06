@@ -1,40 +1,11 @@
 <?php
 
-$title = "PRECEND";
-$video = "https://www.youtube.com/embed/xvb9BqK0NZE";
+$title = "Documentos";
+include('../components/header.php'); 
+$video = $opcoes["videoPrecend"];
 
-include('../components/header.php'); ?>
-
-<?php 
-
-$documentos = [];
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/documentos",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_POSTFIELDS => "",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  
-} else {
-  $documentos = json_decode($response, true);
-}
+$conteudoDocumentosFile = file_get_contents($_SERVER['DOCUMENT_ROOT'].$preUrl."/public/static/documentos.json");
+$conteudoDocumentos = json_decode($conteudoDocumentosFile, true);
 
 ?>
 
@@ -54,7 +25,7 @@ if ($err) {
     <div class="container">
         <div class="row">
             <?php $countDocumentos = 4;
-             foreach($documentos as $documento): 
+             foreach($conteudoDocumentos as $documento): 
              $countDocumentos++;
              if($countDocumentos % 5 == 0){
                  echo '<div class="col-6 col-sm-3 col-lg-2 offset-lg-1">';
@@ -62,7 +33,7 @@ if ($err) {
                  echo '<div class="col-6 col-sm-3 col-lg-2">';
              }
              ?>
-                <a class="copasa__documentos__item" href="<?php echo $documento['arquivo']; ?>" download>
+                <a class="copasa__documentos__item" target="_blank" href="<?php echo $documento['arquivo']; ?>" download>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 1153 1569.6">
 <path fill="#2660AB" d="M876.6,3.8l272.6,272.6c2.5,2.5,3.8,5.6,3.8,9.1c0,423.7,0,847.5,0,1271.2c0,7.1-5.8,12.9-12.9,12.9H12.9

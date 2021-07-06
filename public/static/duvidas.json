@@ -1,0 +1,78 @@
+[
+    {
+        "titulo": "INGRESSO",
+        "texto": "<h3>COMO INGRESSAR NO PROGRAMA?<\/h3>\n<p>O cliente dever\u00e1 acessar o canal de atendimento COPASA Atende e solicitar o laudo de libera\u00e7\u00e3o das instala\u00e7\u00f5es sanit\u00e1rias. Ser\u00e1 realizada uma visita pela COPASA, com o objetivo de analisar se \u00e9 necess\u00e1rio que o estabelecimento ingresse no Programa PRECEND ou se poder\u00e1 ser dispensado e ter o laudo disponibilizado. Se dispensado, o cliente acessar\u00e1 o laudo de libera\u00e7\u00e3o das suas instala\u00e7\u00f5es no pr\u00f3prio protocolo do COPASA Atende, podendo imprimi-lo ou salv\u00e1-lo digitalmente e o processo \u00e9 encerrado. Se necess\u00e1rio ingressar no Programa PRECEND, cliente ser\u00e1 orientado a desenvolver um projeto t\u00e9cnico para avalia\u00e7\u00e3o pela COPASA.<\/p>\n"
+    },
+    {
+        "titulo": "Libera\u00e7\u00e3o",
+        "texto": "<h3>COMO SOLICITAR O LAUDO DE LIBERA\u00c7\u00c3O?<\/h3>\n<p>O cliente dever\u00e1 acessar o canal de atendimento COPASA Atende, para cadastro e preenchimento do formul\u00e1rio pr\u00f3prio. Ser\u00e1 gerado um n\u00famero de protocolo para acompanhamento do servi\u00e7o pelo cliente, por time line com as etapas a serem seguidas pelo cliente e os respectivos prazos . Nesse momento tamb\u00e9m ser\u00e1 fornecido um documento para que o cliente informe ao \u00d3rg\u00e3o Ambiental o in\u00edcio do processo.<\/p>\n"
+    },
+    {
+        "titulo": "VALORES",
+        "texto": "<h3>QUANTO \u00c9 COBRADO?<\/h3>\n<p>A gratuidade de ingresso e da manuten\u00e7\u00e3o no Precend s\u00e3o caracter\u00edsticas marcantes do programa. As cobran\u00e7as que ocorrer\u00e3o s\u00e3o provenientes da presta\u00e7\u00e3o dos servi\u00e7os de coleta e de tratamento do esgoto. Al\u00e9m disso, caso o cliente n\u00e3o cumpra as obriga\u00e7\u00f5es de contrato ou efetue o lan\u00e7amento de esgoto com par\u00e2metros fora dos limites estabelecidos pela legisla\u00e7\u00e3o, poder\u00e3o ocorrer cobran\u00e7as provenientes das irregularidades cometidas e conforme crit\u00e9rios regidos pelo contrato.<\/p>\n"
+    },
+    {
+        "titulo": "Custo",
+        "texto": "<h3>QUANTO CUSTA INGRESSAR NO PRECEND?<\/h3>\n<p>Para ingressar no PRECEND o cliente n\u00e3o pagar\u00e1 nada para a COPASA. Os custos que o estabelecimento poder\u00e1 ter est\u00e3o relacionados \u00e0 contrata\u00e7\u00e3o de consultoria e\/ou execu\u00e7\u00e3o do projeto, se necess\u00e1rios, e \u00e0 contrata\u00e7\u00e3o de laborat\u00f3rio, \u00e0 sua escolha, para realiza\u00e7\u00e3o de an\u00e1lises de auto monitoramento.<\/p>\n"
+    },
+    {
+        "titulo": "EFLUENTES L\u00cdQUIDOS",
+        "texto": "<h3>QUANDO \u00c9 NECESS\u00c1RIO UM SISTEMA DE PR\u00c9-TRATAMENTO DE EFLUENTES L\u00cdQUIDOS?<\/h3>\n<p>Isso vai depender de cada caso. Durante a elabora\u00e7\u00e3o do projeto \u00e9 solicitada uma an\u00e1lise do efluente do estabelecimento. Somente a partir dessa an\u00e1lise a Copasa ter\u00e1 condi\u00e7\u00f5es de identificar se o estabelecimento dever\u00e1 efetuar algum pr\u00e9-tratamento do esgoto, antes de ser lan\u00e7ado na rede p\u00fablica, para atendimento aos limites dos par\u00e2metros estabelecidos pelas normas ambientais.<\/p>\n<p>Muitas vezes somente a altera\u00e7\u00e3o no processo produtivo ou dos produtos utilizados pelo estabelecimento \u00e9 suficiente. Noutros casos poder\u00e3o ser necess\u00e1rias caixas separadoras e retentoras, ou at\u00e9 mesmo tratamentos espec\u00edficos, sempre em fun\u00e7\u00e3o dos resultados da an\u00e1lise realizada.<\/p>\n"
+    },
+    {
+        "titulo": "O FATOR K",
+        "texto": "<h3>O QUE \u00c9 O FATOR K?<\/h3>\n<p>O Fator K \u00e9 um c\u00e1lculo de carga de polui\u00e7\u00e3o adotado na Norma T\u00e9cnica 187\/6. \u00c9 utilizada uma tabela com valores de SST (S\u00f3lidos Suspensos Totais) e DQO (Demanda Qu\u00edmica de Oxig\u00eanio).<\/p>\n<p>Portanto, \u00e9 um multiplicador que reflete o n\u00edvel de polui\u00e7\u00e3o do efluente do estabelecimento e n\u00e3o h\u00e1 limite m\u00e1ximo. Para valores de SST &lt; 300mg\/L e DQO &lt; 450mg\/L, o fator \u00e9 igual a 1, ou seja, n\u00e3o h\u00e1 cobran\u00e7a extra.<\/p>\n"
+    },
+    {
+        "titulo": "CONSULTORIA",
+        "texto": "<h3>\u00c9 NECESS\u00c1RIO CONTRATAR UMA EMPRESA DE ENGENHARIA E CONSULTORIA?<\/h3>\n<p>N\u00e3o. A Copasa n\u00e3o exige que o estabelecimento contrate uma empresa ou consultoria para descri\u00e7\u00e3o e apresenta\u00e7\u00e3o do Projeto, que deve seguir as normas estabelecidas pelo Conselho Regional de Engenharia e Agronomia. Todas as instru\u00e7\u00f5es e informa\u00e7\u00f5es \u201cpasso a passo\u201d constam do Termo de Refer\u00eancia.<\/p>\n<p>A responsabilidade pela solu\u00e7\u00e3o adotada e pela qualidade do esgoto destinado \u00e0 rede p\u00fablica \u00e9 do estabelecimento, ainda que a equipe t\u00e9cnica do PRECEND se disponha a contribuir, sempre que solicitada.<\/p>\n"
+    },
+    {
+        "titulo": "MULTA",
+        "texto": "<h3>QUAL O VALOR DA MULTA?<\/h3>\n<p>A multa \u00e9 um percentual aplicado sobre o valor do esgoto cobrado na \u00faltima fatura. Consta no contrato assinado entre o estabelecimento e a Copasa o percentual da cobran\u00e7a e as circunst\u00e2ncias que a san\u00e7\u00e3o \u00e9 aplicada.<\/p>\n"
+    },
+    {
+        "titulo": "REINCID\u00caNCIA",
+        "texto": "<h3>E em caso de reincid\u00eancia?<\/h3>\n<p>Para a aplica\u00e7\u00e3o das multas estabelecidas em contrato, a Copasa adotou, por analogia, o mesmo crit\u00e9rio e per\u00edodo fixados pela Agencia Reguladora de Servi\u00e7os de Abastecimento de Agua e de Esgotamento Sanit\u00e1rio do Estado de Minas Gerais &#8211; ARSAE-MG, conforme Resolu\u00e7\u00e3o Normativa n\u00ba 133, de 9 de dezembro de 2019. Assim, para o PRECEND \u00e9 considerada reincid\u00eancia a reitera\u00e7\u00e3o da mesma conduta pela qual o cliente tenha sido multado, em meses distintos, nos \u00faltimos 4 (quatro) anos, independente do par\u00e2metro.<\/p>\n"
+    },
+    {
+        "titulo": "Suspens\u00e3o",
+        "texto": "<h3>A COPASA PODE SUSPENDER A PRESTA\u00c7\u00c3O DO SERVI\u00c7O?<\/h3>\n<p>Sim. O descumprimento pelo cliente do estabelecido em qualquer cl\u00e1usula do contrato, especialmente naquelas que se referem \u00e0s condi\u00e7\u00f5es a serem observadas para o lan\u00e7amento dos efluentes l\u00edquidos no sistema de esgotamento sanit\u00e1rio \u00e9 motivo para a suspens\u00e3o, pela Copasa, do recebimento dos efluentes l\u00edquidos n\u00e3o dom\u00e9sticos, bem como para a rescis\u00e3o deste instrumento, de pleno direito, uma vez comprovada a n\u00e3o conformidade e, uma vez notificado expressamente, o cliente persista na irregularidade, sem preju\u00edzo das perdas e danos eventualmente devidas.<\/p>\n"
+    },
+    {
+        "titulo": "\u00d3rg\u00e3o ambiental",
+        "texto": "<h3>A COPASA PODE COMUNICAR OS \u00d3RG\u00c3OS AMBIENTAIS?<\/h3>\n<p>Sim. Quando houver aplica\u00e7\u00e3o de san\u00e7\u00e3o ao cliente e for constatado que o cliente n\u00e3o est\u00e1 tomando as provid\u00eancias para adequa\u00e7\u00e3o dos seus efluentes aos termos fixados na Norma T\u00e9cnica T.187, a Copasa comunicar\u00e1 ao \u00f3rg\u00e3o ambiental competente. Caso seja necess\u00e1rio, a Copasa poder\u00e1 suspender a presta\u00e7\u00e3o de servi\u00e7os de esgotamento sanit\u00e1rio ao cliente conforme estabelece o artigo 26 da Resolu\u00e7\u00e3o ARSAE-MG 130, de 11 de novembro de 2019.<\/p>\n"
+    },
+    {
+        "titulo": "COBRAN\u00c7A",
+        "texto": "<h3>A COBRAN\u00c7A DO FATOR K SEMPRE OCORRER\u00c1 MENSALMENTE EM RELA\u00c7\u00c3O AO RESULTADO DAS AN\u00c1LISES DOS PAR\u00c2METROS DBO E SST, COM BASE NA F\u00d3RMULA TE = (TV X VE) X (K >1), INDEPENDENTE DO TIPO DE EFLUENTE?<\/h3>\n<p>N\u00e3o. A cobran\u00e7a do fator K s\u00f3 acontece para efluentes n\u00e3o dom\u00e9sticos.<\/p>\n"
+    },
+    {
+        "titulo": "FATURA",
+        "texto": "<h3>PARA O PAGAMENTO DOS VALORES PROVENIENTES DE MULTAS OU DO FATOR K DO PRECEND, \u00c9 GERADA UMA FATURA SEPARADA PARA O CLIENTE OU VAI JUNTO COM A CONTA DA COPASA?<\/h3>\n<p>Todos os pagamentos devidos ao cliente, inclusive em rela\u00e7\u00e3o ao PRECEND, s\u00e3o realizados conjuntamente com as faturas mensais de \u00e1gua e\/ou de esgoto.<\/p>\n"
+    },
+    {
+        "titulo": "LIMITE Superior",
+        "texto": "<h3>QUANDO O FATOR K ULTRAPASSAR OS LIMITES SUPERIORES DAS \u00daLTIMAS FAIXAS CONSTANTES DO ANEXO I DA NORMA T.187\/6, O VALOR CONTINUA SENDO CALCULADO SOB A F\u00d3RMULA: K 0,63 + 0,19 X (DQO\/450) + 0,18 X (SST\/300)?<\/h3>\n<p>Sim. A pr\u00f3pria tabela foi calculada com base nessa f\u00f3rmula.<\/p>\n"
+    },
+    {
+        "titulo": "Acima dos Limites",
+        "texto": "<h3>UMA VEZ QUE O FATOR K APRESENTOU ACIMA DOS LIMITES DAS \u00daLTIMAS FAIXAS DO ANEXO I DA NORMA E FOI CORRIGIDO, COMO FICA A COBRAN\u00c7A? QUAL O PROCEDIMENTO PARA QUE O FATOR K N\u00c3O CONTINUE SENDO COBRADO? <\/h3>\n<p>A cobran\u00e7a pelo fator K permanecer\u00e1 at\u00e9 a entrega do novo relat\u00f3rio de auto monitoramento pelo cliente, conforme plano proposto. O Fator K sempre ser\u00e1 calculado com os dados do \u00faltimo relat\u00f3rio de auto monitoramento.<\/p>\n"
+    },
+    {
+        "titulo": "Prazo",
+        "texto": "<h3>QUAL O VALOR APLICADO, QUANDO A EMPRESA ENTREGAR AS AN\u00c1LISES DO RELAT\u00d3RIO DO AUTOMONITORAMENTO FORA DO PRAZO?<\/h3>\n<p>Ser\u00e1 aplicada a tabela de multas, considerando a concentra\u00e7\u00e3o, a reincid\u00eancia e proporcionalidade da conduta.<\/p>\n"
+    },
+    {
+        "titulo": "Penalidade",
+        "texto": "<h3>A PENALIDADE APLIC\u00c1VEL \u00c9 POR PAR\u00c2METROS FORA DO PADR\u00c3O?<\/h3>\n<p>Sim.<\/p>\n"
+    },
+    {
+        "titulo": "Corre\u00e7\u00f5es",
+        "texto": "<h3>UM DOS PAR\u00c2METROS APRESENTOU FORA DO PADR\u00c3O E FOI CORRIGIDO. QUAL \u00c9 O PRAZO QUE A EMPRESA TEM PARA N\u00c3O RECEBER MULTA? SE CORRIGIU, TEM ALGUMA ATENUANTE? <\/h3>\n<p>A entrega do relat\u00f3rio do auto monitoramento com par\u00e2metros fora dos limites estabelecidos na Norma T\u00e9cnica gera para o cliente as penalidades descritas na tabela de multas, para o m\u00eas correspondente ao auto monitoramento. A tabela considera a concentra\u00e7\u00e3o, a reincid\u00eancia e proporcionalidade da conduta. A partir da adequa\u00e7\u00e3o dos par\u00e2metros, constatada nos pr\u00f3ximos monitoramentos, a multa n\u00e3o ser\u00e1 cobrada, desde que n\u00e3o haja outra ocorr\u00eancia.<\/p>\n"
+    },
+    {
+        "titulo": "Limite Inferior",
+        "texto": "<h3>QUAL \u00c9 O PROCEDIMENTO QUANDO AS AN\u00c1LISES DOS PAR\u00c2METROS DO AUTOMONITORAMENTO APRESENTAM VALORES INFERIORES AO LIMITE DE QUANTIFICA\u00c7\u00c3O, OU COM VALORES AT\u00c9 10X MENOR QUE O VMP, AP\u00d3S UM ANO DE AN\u00c1LISE?<\/h3>\n<p>Cada caso ser\u00e1 analisado individualmente, pois pode ser que o par\u00e2metro seja inerente ao processo, e assim, o valor abaixo do limite de quantifica\u00e7\u00e3o indica uma boa gest\u00e3o do empreendimento. Outra situa\u00e7\u00e3o \u00e9 quando o par\u00e2metro realmente n\u00e3o faz parte da constitui\u00e7\u00e3o do efluente, e, neste caso, ap\u00f3s an\u00e1lise da equipe t\u00e9cnica, o par\u00e2metro poder\u00e1 ser retirado do auto monitoramento.<\/p>\n"
+    }
+]

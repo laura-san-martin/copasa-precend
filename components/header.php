@@ -1,49 +1,8 @@
 <?php 
 $preUrl = "/precend";
 
-$opcoes = json_decode(
-    '{
-    "facebookLink": "https://www.facebook.com/copasaminas",
-    "youtubeLink": "https://www.youtube.com/user/TVCOPASAMG/",
-    "twitterLink": "https://www.instagram.com/aquitemcopasa/",
-    "instagramLink": "https://www.instagram.com/aquitemcopasa/",
-    "linkedinLink": "https://www.instagram.com/aquitemcopasa/",
-    "videoPrecend": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "videoEtapas": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "videoDuvidas": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "linkCopasa": "http://www.copasa.com.br/",
-    "linkEsgoto": "https://copasaportalprd.azurewebsites.net/copasa.portal",
-    "linkLogin": "https://copasaatende.powerappsportals.com/",
-    "linkConta": "https://copasaatende.powerappsportals.com/MyAccount/"
-}', true
-);
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/opcoes",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_POSTFIELDS => "",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  
-} else {
-  $opcoes = json_decode($response, true);
-}
+$optionsFile = file_get_contents($_SERVER['DOCUMENT_ROOT'].$preUrl."/public/static/options.json");
+$opcoes = json_decode($optionsFile, true);
 
 ?>
 

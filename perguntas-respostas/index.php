@@ -1,83 +1,11 @@
 <?php
 
-$opcoes = json_decode(
-    '{
-    "facebookLink": "https://www.facebook.com/copasaoficial",
-    "youtubeLink": "https://www.youtube.com/user/TVCOPASAMG/",
-    "twitterLink": "https://www.instagram.com/copasamg/",
-    "instagramLink": "https://www.instagram.com/copasamg/",
-    "videoPrecend": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "videoEtapas": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "videoDuvidas": "https://www.youtube.com/embed/xvb9BqK0NZE",
-    "linkCopasa": "http://www.copasa.com.br/",
-    "linkEsgoto": "http://www.copasa.com.br/wps/portal/internet/esgotamento-sanitario/o-sistema-de-esgoto",
-    "linkLogin": "https://copasaatende.powerappsportals.com/",
-    "linkConta": "https://copasaatende.powerappsportals.com/MyAccount/"
-}', true
-);
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/opcoes",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_POSTFIELDS => "",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  
-} else {
-  $opcoes = json_decode($response, true);
-}
-
 $title = "Dúvidas";
-$video = $opcoes["videoDuvidas"];
+include('../components/header.php'); 
+$video = $opcoes["videoPrecend"];
 
-include('../components/header.php'); ?>
-
-<?php 
-
-$conteudoTextual = [];
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/duvidas",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_POSTFIELDS => "",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  
-} else {
-  $conteudoTextual = json_decode($response, true);
-}
+$conteudoDuvidasFile = file_get_contents($_SERVER['DOCUMENT_ROOT'].$preUrl."/public/static/duvidas.json");
+$conteudoDuvidas = json_decode($conteudoDuvidasFile, true);
 ?>
 
 <section class="copasa__titulo-texto copasa__titulo-texto--video--alt">
@@ -100,7 +28,7 @@ if ($err) {
 </section>
 
 <section class="copasa__titulo-texto copasa__titulo-texto--color">
-<?php foreach($conteudoTextual as $conteudo): ?>
+<?php foreach($conteudoDuvidas as $conteudo): ?>
     <div class="copasa__titulo-texto__conteudo bg-green color-green">
         <div class="container">
             <div class="row">

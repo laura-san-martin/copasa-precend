@@ -1,40 +1,12 @@
 <?php
 
-$title = "PRECEND";
-$video = "https://www.youtube.com/embed/xvb9BqK0NZE";
+$title = "Resoluções";
+include('../components/header.php'); 
+$video = $opcoes["videoPrecend"];
 
-include('../components/header.php'); ?>
+$conteudoResolucoesFile = file_get_contents($_SERVER['DOCUMENT_ROOT'].$preUrl."/public/static/resolucoes.json");
+$conteudoResolucoes = json_decode($conteudoResolucoesFile, true);
 
-<?php 
-
-$conteudoTextual = [];
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://copasa-precend-wp.herokuapp.com/wp-json/copasa/apis/v1/resolucoes",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_POSTFIELDS => "",
-  CURLOPT_HTTPHEADER => array(
-    "Content-Type: application/json"
-  ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  
-} else {
-  $conteudoTextual = json_decode($response, true);
-}
 
 ?>
 
@@ -56,7 +28,7 @@ if ($err) {
 <section class="copasa__texto">
     <div class="container">
         <div class="row">
-            <?php foreach($conteudoTextual as $conteudo): ?>
+            <?php foreach($conteudoResolucoes as $conteudo): ?>
                 <div class="col-12">
                     <div class="copasa__texto__conteudo">
                         <h2><?php echo $conteudo['titulo']; ?></h2>
